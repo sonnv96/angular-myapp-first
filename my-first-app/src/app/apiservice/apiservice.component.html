@@ -1,0 +1,32 @@
+<h1>
+My Contacts
+</h1>
+<div>
+  <table  style="width:100%">
+    <tr>
+      <th>Id</th>
+      <th>Name</th>
+      <th>User Name</th>
+      <th>Email</th>
+      <th>Street</th>
+      <th>Suite</th>
+      <th>City</th>
+      <th>Zipcode</th>
+      <th>Lat</th>
+      <th>Lng</th>
+    </tr>
+    <tr *ngFor="let contact of contacts">
+      <td> {{ contact.id }} </td>
+      <td> {{ contact.name }} </td>
+      <td> {{ contact.username }} </td>
+      <td> {{ contact.email }} </td>
+      <td> {{ contact.address.street }} </td>
+      <td> {{ contact.address.suite }} </td>
+      <td> {{ contact.address.city }} </td>
+      <td> {{ contact.address.zipcode }} </td>
+      <td> {{ contact.address.geo.lat }} </td>
+      <td> {{ contact.address.geo.lng }} </td>
+    </tr>
+  </table>
+
+</div>
