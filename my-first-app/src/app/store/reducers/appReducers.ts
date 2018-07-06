@@ -7,11 +7,13 @@ export interface appReducerState {
 const initalState: appReducerState = {
   login: false
 }
+
+
 export function reducer(state = initalState, action): appReducerState {
   switch (action.type) {
     case ACTION_LOGOUT:
       return {
-        ...state, login: false
+          ...state, login: false
       };
     case ACTION_LOGIN:
       return {

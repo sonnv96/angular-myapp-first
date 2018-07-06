@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from  '@angular/common/http';
 import { Store} from '@ngrx/store';
+import {ListUsers} from './store/reducers/list.model';
 
 
 @Injectable({
@@ -8,6 +9,7 @@ import { Store} from '@ngrx/store';
 })
 export class ApiService {
   API_URL  =  'http://jsonplaceholder.typicode.com';
+  API_URL2 = 'http://localhost:65385/';
   constructor(private  httpClient:  HttpClient,
               private  store: Store<any>) { }
   getContacts() {
@@ -16,4 +18,8 @@ export class ApiService {
   getAllState() {
     return  this.store.select('appReducer');
   }
+  getListUser() {
+    return  this.store.select('appReducer');
+  }
+
 }

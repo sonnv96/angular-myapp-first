@@ -13,7 +13,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { APIServiceComponent } from './apiservice/apiservice.component';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { StoreModule } from '@ngrx/store';
-import { reducers } from './store/reducers';
+import {listReducer} from './store/reducers/listReducer';
 
 
 @NgModule({
@@ -38,7 +38,7 @@ import { reducers } from './store/reducers';
         component: APIServiceComponent
       }
     ]),
-    StoreModule.forRoot(reducers, {}
+    StoreModule.forRoot( {listusers: listReducer}, {}
     ),
     // StoreDevtoolsModule.instrumentOnlyWithExtension()
   ],
